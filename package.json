@@ -1,0 +1,53 @@
+{
+  "name": "divineugizwenayotest",
+  "version": "1.0.0",
+  "description": "A client is requesting you to create a system that would allow them to digitize his quizzing business where he will allow users to get questions  from the system, and they answer them. The system automatically corrects them using answer sheets in the system and gives them their performance results. They can come back to the system and view their past marks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "admin": "cross-env NODE_ENV=development && babel-node ./src/scripts/insertAdmin.js",
+    "start": "cross-env NODE_ENV=development && babel-node ./src/index.js",
+    "dev": "cross-env NODE_ENV=development && nodemon --exec babel-node ./src/index.js",
+    "create-db": "npx sequelize-cli db:create",
+    "drop-db": "npx sequelize-cli db:drop",
+    "migrations": "npx sequelize-cli db:migrate",
+    "undo": "npx sequelize-cli db:migrate:undo:all",
+    "seed": "npx sequelize-cli db:seed:all",
+    "undo-seed": "npx sequelize-cli db:seed:undo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogeniuspriority/divineugizwenayotest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogeniuspriority/divineugizwenayotest/issues"
+  },
+  "homepage": "https://github.com/ogeniuspriority/divineugizwenayotest#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.4",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "@babel/runtime": "^7.11.2",
+    "@hapi/joi": "^17.1.1",
+    "babel-loader": "^8.1.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "pg": "^8.3.3",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.3.4",
+    "sequelize-cli": "^6.2.0"
+  }
+}
